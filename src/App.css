@@ -144,7 +144,7 @@ footer .footerLogoBar {
   justify-items: center;
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
-  background-color: rgb(0, 58, 82);
+  background-color: #fff;
 }
 .newsWrapper .newsBox {
   padding: 10px;

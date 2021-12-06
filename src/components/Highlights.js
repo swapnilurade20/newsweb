@@ -8,14 +8,21 @@ function Highlights()
 
     useEffect(() =>
     {
+        let today=new Date();
+        let dd=String(today.getDate()).padStart(2,"0");
+        let mm=String(today.getMonth()+1).padStart(2,"0");
+        let yyyy=today.getFullYear();
+
+        today=`${yyyy}-${mm}-${dd}`;
+        console.log(today);
         axios
             .get(
-                "https://newsapi.org/v2/everything?q=apple&from=2021-10-22&sortBy=popularity&apiKey=c9cd310262284963ae7c8166c22111b5"
+                `https://newsapi.org/v2/everything?q=apple&from=${today}&sortBy=popularity&apiKey=c9cd310262284963ae7c8166c22111b5`
             )
 
             .then((res) =>
             {
-                // console.log(res);
+                console.log(res);
                 let articles=res.data.articles;
                 setPost(articles);
             })

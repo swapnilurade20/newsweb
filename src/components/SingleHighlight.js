@@ -8,7 +8,7 @@ function SingleHighlight({articles})
     return (
         <div className="newsWrapper">
             {articles.map((post,key) => (
-                <div className="newsBox" key={key}>
+                <div className="newsBox d-flex flex-column" key={key}>
                     <a href={post.url}>
                         <img src={post.urlToImage} className="newsThumbnail" />
                     </a>

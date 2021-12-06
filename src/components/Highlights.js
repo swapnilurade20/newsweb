@@ -12,6 +12,7 @@ function Highlights()
             .get(
                 "https://newsapi.org/v2/everything?q=apple&from=2021-10-22&sortBy=popularity&apiKey=c9cd310262284963ae7c8166c22111b5"
             )
+
             .then((res) =>
             {
                 // console.log(res);
